@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.widget.Toast
 import androidx.core.content.FileProvider
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -87,11 +86,6 @@ class SharefilePlugin :
                 )
                 result.success(null)
             } else {
-                Toast.makeText(
-                    context,
-                    "O aplicativo não foi encontrado.",
-                    Toast.LENGTH_LONG
-                ).show()
                 result.error("NO_APP", "Target app not found", null)
             }
         } else {
